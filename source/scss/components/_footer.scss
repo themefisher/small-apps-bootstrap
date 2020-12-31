@@ -1,0 +1,134 @@
+.footer-main {
+	padding: 92px 0;
+	background: #1a1b1f;
+
+	@include tablet {
+		padding: 50px 0;
+	}
+
+	.block {
+		img {
+			margin-bottom: 20px;
+
+			#small-Apps {
+				fill: red;
+			}
+		}
+
+		ul.social-icon {
+			li {
+				a {
+					text-decoration: none;
+					display: block;
+					width: 38px;
+					height: 38px;
+					border-radius: 100%;
+					background: #3f3f43;
+					color: $light;
+					text-align: center;
+					line-height: 38px;
+				}
+			}
+		}
+
+		@include tablet {
+			margin-bottom: 40px;
+		}
+	}
+
+	.block-2 {
+		h6 {
+			font-weight: bold;
+			font-size: 14px;
+			text-transform: uppercase;
+			color: $light;
+			margin-bottom: 25px;
+		}
+
+		ul {
+			padding: 0;
+
+			li {
+				margin-bottom: 10px;
+				list-style: none;
+
+				a {
+					font-size: 14px;
+					color: #6f6f71;
+					transition: .2s ease;
+
+					&:hover {
+						color: $light;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-classic {
+	background: #fafafa;
+	text-align: center;
+	padding: 110px 0;
+
+	ul.social-icons {
+		margin-bottom: 30px;
+
+		li {
+			@include mobile {
+				margin-bottom: 10px;
+			}
+
+			a {
+				padding: 0 20px;
+				display: block;
+
+				i {
+					font-size: 25px;
+					color: $dark;
+				}
+			}
+		}
+	}
+
+	ul.footer-links {
+		li {
+			a {
+				padding: 0 10px;
+				display: block;
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 14px;
+				color: $dark;
+			}
+		}
+	}
+}
+
+// scroll-top-to button
+.scroll-top-to{
+	position: fixed;
+	right:20px;
+	bottom: 50px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: $primary-color;
+	color: $light;
+	transition: 0.3s;
+	z-index: 999556;
+	cursor: pointer;
+	display: none;
+	&:hover {
+		background: #333;
+	}
+
+	@include tablet {
+		bottom: 15px;
+		right: 15px;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+	}
+}

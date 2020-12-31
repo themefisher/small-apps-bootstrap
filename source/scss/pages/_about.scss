@@ -1,0 +1,123 @@
+.about {
+	.content {
+		@include mobile {
+			text-align: center;
+		}
+
+		h2 {
+			margin-bottom: 20px;
+			text-transform: capitalize;
+		}
+	}
+
+	.about-slider {
+		.item {
+			padding: 20px;
+		}
+
+		// Owl dot Active color overide
+		.owl-dots {
+			.owl-dot {
+				&:hover {
+					span {
+						background: $primary-color;
+					}
+				}
+
+				&.active {
+					span {
+						background: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.create-stories {
+	.block {
+		img {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			margin-bottom: 10px;
+		}
+
+		@include tablet {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.quotes {
+	.quote-slider {
+		h2 {
+			font-size: 50px;
+		}
+
+		cite {
+			margin-left: 150px;
+			font-style: normal;
+		}
+	}
+}
+
+.clients {
+	padding: 50px 0;
+
+	h3 {
+		margin-bottom: 30px;
+	}
+
+	.client-slider {
+		.slick-track {
+			display: flex;
+			align-items: center;
+		}
+
+		img {
+			max-width: 80%;
+		}
+	}
+}
+
+.investors {
+	.block {
+		margin-bottom: 30px;
+
+		.image {
+			margin-bottom: 20px;
+
+			img {
+				width: 100%;
+				border-radius: 8px;
+			}
+		}
+
+		h3 {
+			margin-bottom: 0;
+			line-height: 1;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	}
+}
+
+.hover-zoom {
+	overflow: hidden;
+	border-radius: 8px;
+
+	img {
+		transition: .3s ease;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.2);
+		}
+	}
+}

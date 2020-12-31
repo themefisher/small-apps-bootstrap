@@ -1,0 +1,115 @@
+.career-featured {
+	.block {
+		display: flex;
+
+		@include tablet {
+			flex-wrap: wrap;
+		}
+
+		.content {
+			flex-basis: 100%;
+			align-self: center;
+
+			@include tablet {
+				flex-grow: 1;
+				width: 100%;
+				margin-bottom: 30px;
+				text-align: center;
+			}
+
+			h2 {
+				margin-bottom: 30px;
+			}
+		}
+
+		.video {
+			justify-content: center;
+			align-self: center;
+			flex-basis: 100%;
+			margin-left: 10px;
+
+			@include tablet {
+				flex-grow: 1;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.company-fun-facts {
+	h2 {
+		margin-bottom: 60px;
+	}
+
+	.fun-fact {
+		margin-bottom: 20px;
+		text-align: center;
+
+		i {
+			font-size: 25px;
+			display: inline-block;
+			margin-bottom: 10px;
+			line-height: 60px;
+			height: 60px;
+			width: 60px;
+			border: 1px solid $black;
+			border-radius: 100%;
+		}
+	}
+}
+
+.gallery {
+	.image {
+		cursor: pointer;
+	}
+}
+
+.job-list {
+	.block {
+		padding: 50px 80px;
+		background: $light;
+		@extend .shadow;
+
+		h2 {
+			margin-bottom: 40px;
+			font-size: 30px;
+		}
+
+		.job {
+			padding: 50px 10px;
+			display: flex;
+
+			@include tablet {
+				display: block;
+				text-align: center;
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $border-color;
+			}
+
+			@include mobile {
+				flex-wrap: wrap;
+			}
+
+			.content {
+				flex-basis: 100%;
+
+				h3 {
+					margin-bottom: 0;
+				}
+			}
+
+			.apply-button {
+				flex-basis: 100%;
+				align-self: center;
+				text-align: right;
+
+				@include tablet {
+					margin-top: 20px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

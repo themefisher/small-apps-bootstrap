@@ -1,0 +1,22 @@
+.error-page{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+    .center{
+    	height: 100%;
+    	display: flex;
+        justify-content: center;
+        align-items: center;
+        .block{
+			h1{
+				font-size: 200px;
+				font-weight: 400;
+				line-height: 266px;
+				font-family: $secondary-font;
+			}
+			p{
+				margin-bottom: 50px;
+			}
+		}
+    }
+}

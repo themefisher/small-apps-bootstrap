@@ -1,0 +1,36 @@
+.address {
+	.block {
+		.address-block {
+			text-align: center;
+
+			.icon {
+				margin-bottom: 25px;
+				display: flex;
+				justify-content: center;
+
+				i {
+					display: block;
+					height: 100px;
+					width: 100px;
+					background: $light-gray;
+					border-radius: 100%;
+					font-size: 45px;
+					text-align: center;
+					line-height: 100px;
+				}
+			}
+		}
+	}
+}
+
+.google-map {
+	position: relative;
+
+	#map_canvas {
+		height: 500px;
+		width: 100%;
+		@include tablet {
+			height: 350px;
+		}
+	}
+}

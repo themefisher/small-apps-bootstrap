@@ -1,0 +1,43 @@
+.jd-modal{
+  .modal-content{
+    padding: 25px;
+    text-align: left;
+    background: $light-gray;
+    .modal-header{
+      .modal-title{
+        color: $black;
+      }
+    }
+    .modal-body{
+      .block-2{
+        display: flex;
+        .title{
+          width: 30%;
+          p{
+            color: $dark;
+          }
+        }
+        .details{
+          // margin-left: 100px;
+          width: 70%;
+          ul{
+            padding-left: 0;
+            margin: 0;
+            li{
+              list-style: none;
+              margin-bottom: 5px;
+              span{
+                padding-right: 5px;
+                color: $dark;
+              }
+            }
+          }
+        }
+        margin-bottom: 70px;
+      }
+      .form-title{
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

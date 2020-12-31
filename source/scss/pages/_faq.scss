@@ -1,0 +1,62 @@
+.faq {
+	.block {
+		padding: 50px;
+
+		@include mobile {
+			padding: 30px;
+		}
+
+		.faq-item {
+			.faq-item-title {
+				h2 {
+					font-size: 30px;
+					border-bottom: 1px solid $border-color;
+				}
+
+				margin-bottom: 30px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.item {
+				.item-link {
+					position: relative;
+
+					a {
+						span {
+							margin-right: 5px;
+						}
+
+						font-size: 20px;
+						color: $dark;
+					}
+
+					&:before {
+						font-family: 'themify';
+						content: "\e64b";
+						position: absolute;
+						left: 0;
+						font-weight: 600;
+						font-size: 15px;
+						top: 15px;
+					}
+
+					padding: 10px 0 10px 18px;
+					padding-left: 25px;
+				}
+
+				.accordion-block {
+					background: $light-gray;
+
+					p {
+						padding: 20px;
+					}
+				}
+			}
+
+			margin-bottom: 40px;
+		}
+	}
+}

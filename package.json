@@ -1,0 +1,21 @@
+{
+  "name": "themefisher-theme-kit",
+  "version": "1.1.0",
+  "description": "Gulp environment for running HTML themes by themefisher",
+  "keywords": [
+    "gulp",
+    "frontend"
+  ],
+  "author": "Themefisher",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "run-sequence": "^2.2.1"
+  }
+}

@@ -1,0 +1,53 @@
+// Google Font Import
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:300,400,600,700,800');
+
+// Body
+body{
+	font-family: $primary-font;
+	-webkit-font-smoothing: antialiased;
+}
+
+// Headings
+h1,h2,h3,h4,h5,h6{
+	font-family: $primary-font;
+	color: $dark;
+	font-weight:300;
+}
+
+h1{
+	font-size: 45px;
+	line-height: 61px;
+}
+
+h2{
+	font-size: 40px;
+	line-height: 50px;
+}
+
+h3{
+	font-size: 20px;
+	line-height: 30px;
+}
+
+// Others 
+p, li, blockquote, label{
+	font-size: 16px;
+	letter-spacing: 0;
+	line-height: 25px;
+	color: $text-color;
+	margin-bottom: 0;
+}
+cite{
+	font-size: 14px;
+	font-style: normal;
+}
+.lora{
+	font-family: $secondary-font;
+	font-style: italic;
+}
+// Placeholder Color Change
+.form-control::-webkit-input-placeholder { 
+	color: $text-color; 
+	line-height: 25px;
+	font-size: 16px;
+}

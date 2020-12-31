@@ -1,0 +1,53 @@
+ul.app-badge{
+	margin-bottom: 60px;
+	li{
+		a{
+			img{
+				width: 150px;
+				height: auto;
+			}
+		}
+		@include mobile-xs {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+ul.post-tag{
+	margin-bottom: 20px;
+	li{
+		font-size: 14px;
+		img{
+			width: 25px;
+			height: 25px;
+	        border-radius: 100%;
+			margin-right: 5px;
+			
+		}
+		a{
+			font-size: 14px;
+		}
+		&:last-child{
+			margin-left: 25px;
+		}
+	}
+}
+
+ul.social-links{
+	margin-bottom: 0;
+	li{
+		&:first-child{
+			a{
+				padding-left: 0;
+			}
+		}
+		a{
+			padding: 0 15px;
+			display: block;
+			i{
+				font-size: 20px;
+				color: $dark;
+			}
+		}
+	}
+}

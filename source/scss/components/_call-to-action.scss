@@ -1,0 +1,57 @@
+.call-to-action-app {
+	text-align: center;
+
+	h2,
+	p,
+	a {
+		color: $light !important;
+	}
+
+	p {
+		margin-bottom: 60px;
+	}
+
+	ul {
+		li {
+			margin: 10px;
+
+			@include mobile {
+				margin-left: 0;
+				margin-bottom: 10px;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			a {
+				i {
+					font-size: 20px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.cta-hire {
+	background: #FAFAFA;
+
+	p {
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	h2,
+	p {
+		margin-bottom: 20px;
+	}
+}
+
+.cta-community {
+	margin-bottom: 50px;
+	padding: 40px 100px;
+	@include desktop {
+		padding: 40px;
+	}
+}

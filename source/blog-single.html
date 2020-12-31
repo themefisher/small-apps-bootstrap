@@ -1,0 +1,122 @@
+@@include('header.htm')
+
+@@include('blocks/navigation.htm', {"pages" : "active", "blogSingle" : "active"})
+
+<!--====================================
+=            Single Article            =
+=====================================-->
+<section class="section blog-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 m-auto">
+				<!-- Single Post -->
+				<article class="single-post">
+					<!-- Post title -->
+					<div class="post-title text-center">
+						<h1>Innovation distinguishes between a leader and a follower.</h1>
+						<!-- Tags -->
+						<ul class="list-inline post-tag">
+							<li class="list-inline-item">
+								<img src="images/testimonial/feature-testimonial-thumb.jpg" alt="author-thumb">
+							</li>
+							<li class="list-inline-item">
+								<a href="#">Thomas Johnson</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">August 8, 2017</a>
+							</li>
+						</ul>
+					</div>
+					<!-- Post body -->
+					<div class="post-body">
+						<!-- Feature Image -->
+						<div class="feature-image">
+							<img class="img-fluid" src="images/blog/single-blog-feature-image.jpg" alt="feature-image">
+						</div>
+						<!-- Paragrapgh -->
+						<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+						<p>Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+						<!-- Blockquote -->
+						<div class="quote">
+							<blockquote>
+								Design is not just what it looks like and feels like. Design is how it works.
+							</blockquote>
+						</div>
+						<!-- Paragrapgh -->
+						<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+						<!-- Post Image -->
+						<div class="post-image text-center">
+							<img class="img-fluid" src="images/blog/post-body-image.jpg" alt="post-body-image">
+						</div>
+						<!-- Paragrapgh -->
+						<p>Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+					</div>
+				</article>
+				<!-- About Author Widget -->
+				<div class="about-author">
+					<h2>About this author</h2>
+					<div class="media">
+						<!-- Author Image -->
+						<div class="image">
+							<img class="d-flex justify-content-center align-self-center" src="images/team/marketing-team-03.jpg" alt="author-image">
+						</div>
+						<!-- About Author -->
+						<div class="media-body align-self-center">
+							<!-- Author Name -->
+							<h3>Jonathon Andrew</h3>
+							<!-- Bio -->
+							<p>Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Mauris blandit aliquet elit, </p>
+							<!-- Author Social links -->
+							<ul class="list-inline social-links">
+								<li class="list-inline-item"><a href="https://themefisher.com/"><i class="ti-facebook"></i></a></li>
+								<li class="list-inline-item"><a href="https://themefisher.com/"><i class="ti-twitter"></i></a></li>
+								<li class="list-inline-item"><a href="https://themefisher.com/"><i class="ti-instagram"></i></a></li>
+								<li class="list-inline-item"><a href="https://themefisher.com/"><i class="ti-dribbble"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--====  End of Single Article  ====-->
+
+<!--======================================
+=            Related Article            =
+=======================================-->
+<section class="section related-articles bg-gray">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 title">
+				<!-- Section Title -->
+				<h2>Related Articles</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				@@include('blocks/article.htm',{
+					"img-src" 		: "images/blog/post-01.jpg",
+					"post-title" 	: "Innovation distinguishes between a leader and a follower."
+				})
+			</div>
+			<div class="col-lg-4 col-md-6">
+				@@include('blocks/article.htm',{
+					"img-src" 		: "images/blog/post-02.jpg",
+					"post-title" 	: "Design is not just what it looks like and feels like. Design is how it works."
+				})
+			</div>
+			<div class="col-lg-4 col-md-6">
+				@@include('blocks/article.htm',{
+					"img-src" 		: "images/blog/post-03.jpg",
+					"post-title" 	: "Design is not just what it looks like and feels like. Design is how it works."
+				})
+			</div>
+		</div>
+	</div>
+</section>
+<!--====  End of Related Article  ====-->
+
+@@include('blocks/footer.htm')
+
+@@include('footer.htm')

@@ -1,0 +1,236 @@
+.featured-article {
+	padding: 0 0 50px 0;
+
+	article.featured {
+		display: flex;
+
+		@include tablet {
+			flex-wrap: wrap;
+		}
+
+		.image {
+			flex-basis: 100%;
+			padding: 20px;
+
+			img {
+				width: 100%;
+				border-radius: 8px;
+			}
+
+			@include tablet {
+				margin-bottom: 20px;
+			}
+		}
+
+		.content {
+			margin-left: 30px;
+			flex-basis: 100%;
+			align-self: center;
+
+			@include tablet {
+				text-align: center;
+			}
+
+			h2 {
+				margin-bottom: 20px;
+
+				a {
+					font-size: 30px;
+					color: $black;
+					display: inline-block;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+
+			p {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+.post-sm {
+	margin-bottom: 40px;
+
+	.post-thumb {
+		margin-bottom: 15px;
+		overflow: hidden;
+
+		img {
+			transition: .3s ease;
+		}
+
+	}
+
+	.post-title {
+		h3 {
+			a {
+				color: $dark;
+				font-size: 20px;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+
+		margin-bottom: 15px;
+	}
+
+	&:hover {
+		.post-thumb {
+			img {
+				transform: scale(1.3);
+			}
+		}
+	}
+}
+
+.blog-single {
+	.single-post {
+		padding-bottom: 70px;
+
+		.post-body {
+			.feature-image {
+				margin-bottom: 30px;
+
+				img {
+					width: 100%;
+				}
+			}
+
+			p {
+				margin-bottom: 20px;
+			}
+
+			.quote {
+				padding: 30px 0;
+				width: 80%;
+				margin: 0 auto;
+
+				@include tablet {
+					width: 80%;
+				}
+
+				blockquote {
+					color: $black;
+					padding: 10px 0 10px 30px;
+					text-align: left;
+					font-size: 30px;
+					line-height: 40px;
+					border-left: 6px solid #666666;
+				}
+			}
+
+			.post-image {
+				width: 60%;
+				margin: 0 auto;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.about-author {
+		h2 {
+			padding-bottom: 15px;
+			border-bottom: 1px solid $border-color;
+			margin-bottom: 30px;
+			font-size: 30px;
+
+			@include mobile {
+				text-align: center;
+			}
+		}
+
+		.media {
+			@include mobile {
+				flex-wrap: wrap;
+			}
+
+			.image {
+				@include mobile {
+					flex-grow: 1;
+					width: 100%;
+					display: flex;
+					justify-content: center;
+				}
+
+				img {
+					width: 150px;
+					height: 150px;
+					border-radius: 100%;
+				}
+			}
+
+			.media-body {
+				@include mobile {
+					flex-grow: 1;
+					width: 100%;
+					text-align: center;
+					margin-left: 0;
+					margin-top: 20px;
+				}
+
+				margin-left: 40px;
+
+				p {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+.related-articles {
+	.title {
+		margin-bottom: 20px;
+
+		h2 {
+			font-size: 30px;
+		}
+	}
+}
+
+// Pagination
+.pagination-nav {
+	display: flex;
+	justify-content: center;
+
+	ul.pagination {
+		padding-top: 30px;
+
+		li {
+			margin-right: 10px;
+
+			a {
+				border-radius: 3px;
+				padding: 0;
+				height: 50px;
+				width: 50px;
+				line-height: 50px;
+				text-align: center;
+				border-color: transparent;
+				box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+				color: $text-color;
+				transition: .3s ease-in;
+
+				&:hover {
+					background-color: $primary-color;
+					color: $light;
+					border-color: transparent;
+				}
+			}
+		}
+
+		.active {
+			a {
+				background-color: $primary-color;
+				color: $light;
+				border-color: transparent;
+			}
+		}
+	}
+}

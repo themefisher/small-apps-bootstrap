@@ -1,0 +1,66 @@
+.privacy {
+	.privacy-nav {
+		position: -webkit-sticky; // required for Safari
+		position: sticky;
+		top: 15px;
+		background: $light-gray;
+		padding: 30px 0;
+		display: flex;
+		justify-content: center;
+
+		ul {
+			padding-left: 0;
+			margin-bottom: 0;
+
+			li {
+				list-style: none;
+
+				a {
+					font-size: 16px;
+					color: $title-color;
+					padding: 10px 0;
+					font-weight: bold;
+					display: block;
+
+					@include tablet {
+						font-size: 16px;
+						padding: 5px 0;
+					}
+
+					&.active {
+						color: $black;
+					}
+				}
+			}
+		}
+
+		@include tablet {
+			margin-bottom: 30px;
+		}
+	}
+
+	.block {
+		background: $light;
+		padding: 40px 50px;
+		@extend .shadow;
+
+		.policy-item {
+			padding-bottom: 40px;
+
+			.title {
+				margin-bottom: 20px;
+
+				h3 {
+					border-bottom: 1px solid $border-color;
+					padding-bottom: 15px;
+				}
+			}
+
+			.policy-details {
+				p {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+.coming-soon {
+  color: $black;
+  padding: 120px 0;
+  min-height: 100vh;
+
+  @include desktop {
+    padding: 80px 0;
+  }
+
+  .block {
+    h3 {
+      color: $text-color;
+    }
+
+    .count-down {
+      margin-top: 70px;
+
+      @include tablet {
+        margin-top: 40px;
+      }
+
+      .syotimer-cell {
+        min-width: 200px;
+        padding: 45px 0;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        background: $light;
+        display: inline-block;
+        @extend .shadow;
+
+        @include tablet {
+          min-width: 180px;
+          padding: 35px 0;
+        }
+
+        .syotimer-cell__value {
+          font-size: 65px;
+          line-height: 80px;
+          text-align: center;
+          position: relative;
+          font-weight: bold;
+
+        }
+
+        .syotimer-cell__unit {
+          font-size: 20px;
+          color: #6c6c6c;
+          text-transform: uppercase;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

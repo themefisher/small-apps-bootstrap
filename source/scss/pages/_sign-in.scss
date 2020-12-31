@@ -1,0 +1,58 @@
+.user-login{
+	height: 100%;
+	width: 100%;
+    .block{
+    	display: flex;
+    	@include tablet {
+    		flex-wrap: wrap;
+    	}
+    	.image{
+	        flex-basis: 100%;
+	        @include tablet {
+	        	flex-grow : 1;
+	        	text-align: center;
+	        	margin-bottom: 30px;
+	        	margin-right: 0;
+	        }
+	        img{
+	        	border-radius: 8px;
+	        	@extend .shadow;
+	        }
+	        margin-right: 40px;
+    	}
+    	.content{
+    		@include tablet {
+	        	flex-grow : 1;
+	        }
+	        flex-basis: 100%;
+            align-self: center;
+    	    padding: 50px;
+    	    border: 1px solid $border-color;
+    	    border-radius: 4px;
+    	    .logo{
+    			margin-bottom: 80px;
+    			@include desktop {
+    				margin-bottom: 40px;
+    			}
+    		}
+    		.title-text{
+    			margin-bottom: 35px;
+    			h3{
+    				padding-bottom: 20px;
+    				border-bottom: 1px solid $border-color;
+    			}
+    		}
+    		.new-acount{
+    			margin-top: 20px;
+    			p,a{
+    				font-size: 14px;
+    			}
+                p{
+                    a{
+                        color: $black;
+                    }
+                }
+    		}
+    	}
+    }
+}
