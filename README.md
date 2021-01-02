@@ -4,11 +4,13 @@ Small Apps is a clean and modern Free responsive app landing-page template for M
 
 <!-- demo -->
 ## Example Site
-| [![](screenshots/homepage.png)](https://demo.themefisher.com/small-apps/) | [![](screenshots/about.png)](https://demo.themefisher.com/small-apps/about.html) | [![](screenshots/homepage-3.png)](https://demo.themefisher.com/small-apps/homepage-3.html) |
+| [![](screenshots/homepage.png)](https://demo.themefisher.com/small-apps/) | [![](screenshots/homepage-2.png)](http://localhost:3000/homepage-2.html) | [![](screenshots/homepage-3.png)](https://demo.themefisher.com/small-apps/homepage-3.html) |
 |:---:|:---:|:---:|
-| **Homepage**  | **About**  | **Homepage 03**  |
-| [![](screenshots/blog-r.png)](https://demo.themefisher.com/small-apps/blog.html) | [![](screenshots/contact.png)](https://demo.themefisher.com/small-apps/contact.html) | [![](screenshots/signin.png)](https://demo.themefisher.com/small-apps/sign-in.html) |
-| **Blogs** | **Contact** | **Sign In** |
+| **Homepage 1**  | **Homepage 2**  | **Homepage 3**  |
+| [![](screenshots/about.png)](https://demo.themefisher.com/small-apps/about.html) | [![](screenshots/career.png)](https://demo.themefisher.com/small-apps/career.html) | [![](screenshots/team.png)](https://demo.themefisher.com/small-apps/team.html) |
+| **About** | **Career** | **Team** |
+| [![](screenshots/blog-r.png)](https://demo.themefisher.com/small-apps/blog.html) | [![](screenshots/blog-details.png)](https://demo.themefisher.com/small-apps/blog-single.html) | [![](screenshots/contact.png)](https://demo.themefisher.com/small-apps/contact.html) |
+| **Blogs** | **Blog Details** | **Contact** |
 
 👉🏻[View Live Preview](https://demo.themefisher.com/small-apps/)
 
@@ -17,8 +19,8 @@ Small Apps is a clean and modern Free responsive app landing-page template for M
 ## Download And installation
 Download this template from any following options:
 
-* Download from [Github](https://github.com/themefisher/Small-apps-onepage-html5-app-landing-page/archive/master.zip)
-* Clone the repository: `git clone https://github.com/themefisher/Small-apps-onepage-html5-app-landing-page.git`
+* Download from [Github](https://github.com/themefisher/Small-Apps-Bootstrap-App-Landing-Template/archive/master.zip)
+* Clone the repository: `git clone https://github.com/themefisher/Small-Apps-Bootstrap-App-Landing-Template.git`
 * Download from [Themefisher](https://themefisher.com/products/small-apps-free-app-landing-page-template/)
 
 
@@ -55,8 +57,8 @@ After that, it will open up a preview of the template in your default browser, w
 
 <!-- reporting issue -->
 ## Reporting Issues
-We use GitHub Issues as the official bug tracker for the Small Apps Template. Please Search [existing issues](https://github.com/themefisher/Small-apps-onepage-html5-app-landing-page/issues). It’s possible someone has already reported the same problem.
-If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/themefisher/Small-apps-onepage-html5-app-landing-page/issues).
+We use GitHub Issues as the official bug tracker for the Small Apps Template. Please Search [existing issues](https://github.com/themefisher/Small-Apps-Bootstrap-App-Landing-Template/issues). It’s possible someone has already reported the same problem.
+If your problem or idea has not been addressed yet, feel free to [open a new issue](https://github.com/themefisher/Small-Apps-Bootstrap-App-Landing-Template/issues).
 
 <!-- support -->
 ## Technical Support or Questions (Paid)
@@ -64,8 +66,20 @@ If you have questions or need help integrating the product please [contact us](m
 
 <!-- licence -->
 ## License
-Copyright &copy; 2020 Designed & Developed by [Themefisher](https://themefisher.com)
+Copyright &copy; 2021 Designed & Developed by [Themefisher](https://themefisher.com)
 
-**Code License:** Released under the [MIT](https://github.com/themefisher/Small-apps-onepage-html5-app-landing-page/blob/master/LICENSE) license.
+**Code License:** Released under the [MIT](https://github.com/themefisher/Small-Apps-Bootstrap-App-Landing-Template/blob/master/LICENSE) license.
 
 **Image license:** The images are only for demonstration purposes. They have their own licence, we don't have permission to share those image.
+
+<!-- resources -->
+## Resources
+Some third-party plugins that we used to build this template. Please check their licence.
+* **Bootstrap v4.5**: https://getbootstrap.com/docs/4.5/getting-started/introduction/
+* **Jquery v3.5.1**: https://jquery.com/download/
+* **Themify Icons**: https://themify.me/themify-icons
+* **Google Fonts**: http://fonts.google.com/
+* **AOS**: https://michalsnik.github.io/aos/
+* **Fancybox**: http://fancyapps.com/fancybox/
+* **Slick**: https://kenwheeler.github.io/slick/
+* **SyoTimer**: http://syomochkin.xyz/folio/syotimer/demo.html
