@@ -14,6 +14,24 @@ Small Apps is a clean and modern Free responsive app landing-page template for M
 
 👉🏻[View Live Preview](https://demo.themefisher.com/small-apps/)
 
+<!-- resources -->
+## Pages
+* **Homepage 1**
+* **Homepage 2**
+* **Homepage 3**
+* **About**
+* **Team**
+* **Career**
+* **Blog**
+* **Blog Details**
+* **Contact**
+* **FAQ**
+* **Coming Soon**
+* **404**
+* **Privacy Policy**
+* **Signin**
+* **Signup**
+
 
 <!-- download -->
 ## Download And installation
