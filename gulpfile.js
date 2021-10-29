@@ -1,11 +1,10 @@
 'use strict';
 
 var gulp         = require('gulp');
-var sass         = require('gulp-sass');
+var sass         = require('gulp-sass')(require('sass'));
 var sourcemaps   = require('gulp-sourcemaps');
 var fileinclude  = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
-var runSequence  = require('run-sequence');
 var bs           = require('browser-sync').create();
 var rimraf       = require('rimraf');
 
@@ -26,7 +25,7 @@ var path = {
 };
 
 // HTML
-gulp.task('html:build', function () {
+function html_build() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
       basepath: path.src.incdir
@@ -35,88 +34,85 @@ gulp.task('html:build', function () {
     .pipe(bs.reload({
       stream: true
     }));
-});
+}
 
 // SCSS
-gulp.task('scss:build', function () {
-return gulp.src(path.src.scss)
-  .pipe(sourcemaps.init())
-  .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-  .pipe(autoprefixer())
-  .pipe(sourcemaps.write('/'))
-  .pipe(gulp.dest(path.build.dirDev + 'css/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function scss_build() {
+  return gulp.src(path.src.scss)
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest(path.build.dirDev + 'css/'))
+    .pipe(bs.reload({
+      stream: true
+    }));
+}
 
 // Javascript
-gulp.task('js:build', function () {
-return gulp.src(path.src.js)
-  .pipe(gulp.dest(path.build.dirDev + 'js/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function js_build() {
+  return gulp.src(path.src.js)
+    .pipe(gulp.dest(path.build.dirDev + 'js/'))
+    .pipe(bs.reload({
+      stream: true
+    }));
+}
 
 // Images
-gulp.task('images:build', function () {
-return gulp.src(path.src.images)
-  .pipe(gulp.dest(path.build.dirDev + 'images/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function images_build() {
+  return gulp.src(path.src.images)
+    .pipe(gulp.dest(path.build.dirDev + 'images/'))
+    .pipe(bs.reload({
+      stream: true
+    }));
+}
 
 // Plugins
-gulp.task('plugins:build', function () {
-return gulp.src(path.src.plugins)
-  .pipe(gulp.dest(path.build.dirDev + 'plugins/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function plugins_build() {
+  return gulp.src(path.src.plugins)
+    .pipe(gulp.dest(path.build.dirDev + 'plugins/'))
+    .pipe(bs.reload({
+      stream: true
+    }));
+}
 
 // Other files like favicon, php, sourcele-icon on root directory
-gulp.task('others:build', function () {
-return gulp.src(path.src.others)
-  .pipe(gulp.dest(path.build.dirDev))
-});
+function others_build() {
+  return gulp.src(path.src.others)
+    .pipe(gulp.dest(path.build.dirDev));
+}
 
 // Clean Build Folder
-gulp.task('clean', function (cb) {
-  rimraf('./theme', cb);
-});
+function clean(cb) {
+  return rimraf('./theme', cb);
+}
 
 // Watch Task
-gulp.task('watch:build', function () {
-  gulp.watch(path.src.html, ['html:build']);
-  gulp.watch(path.src.htminc, ['html:build']);
-  gulp.watch(path.src.scss, ['scss:build']);
-  gulp.watch(path.src.js, ['js:build']);
-  gulp.watch(path.src.images, ['images:build']);
-  gulp.watch(path.src.plugins, ['plugins:build']);
-});
+function watch_build() {
+  gulp.watch(path.src.html, gulp.series(html_build));
+  gulp.watch(path.src.htminc, gulp.series(html_build));
+  gulp.watch(path.src.scss, gulp.series(scss_build));
+  gulp.watch(path.src.js, gulp.series(js_build));
+  gulp.watch(path.src.images, gulp.series(images_build));
+  gulp.watch(path.src.plugins, gulp.series(plugins_build));
+}
 
 // Build Task
-gulp.task('build', function () {
-  runSequence(
-    'clean',
-    'html:build',
-    'js:build',
-    'scss:build',
-    'images:build',
-    'plugins:build',
-    'others:build',
-    'watch:build',
-    function () {
+exports.default = gulp.series(
+  clean,
+  html_build,
+  js_build,
+  scss_build,
+  images_build,
+  plugins_build,
+  others_build,
+  gulp.parallel(
+    watch_build,
+    function() {
       bs.init({
         server: {
           baseDir: path.build.dirDev
         }
       });
-    }
-  );
-});
-
-gulp.task("default", ["build"]);
+    })
+);
