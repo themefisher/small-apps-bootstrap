@@ -1,6 +1,6 @@
 {
   "name": "themefisher-theme-kit",
-  "version": "1.1.0",
+  "version": "2.1.0",
   "description": "Gulp environment for running HTML themes by themefisher",
   "keywords": [
     "gulp",
@@ -10,12 +10,13 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.24.5",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-file-include": "^2.0.1",
-    "gulp-rimraf": "^0.2.2",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "run-sequence": "^2.2.1"
+    "gulp-rimraf": "^1.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "run-sequence": "^2.2.1",
+    "sass": "^1.43.4"
   }
 }
