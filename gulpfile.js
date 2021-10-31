@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp         = require('gulp');
-var sass         = require('gulp-sass');
+var sass         = require('gulp-sass')(require('sass'));
 var sourcemaps   = require('gulp-sourcemaps');
 var fileinclude  = require('gulp-file-include');
 var autoprefixer = require('gulp-autoprefixer');
@@ -26,69 +26,72 @@ var path = {
 };
 
 // HTML
-gulp.task('html:build', function () {
+function htmlBuild() {
   return gulp.src(path.src.html)
-    .pipe(fileinclude({
-      basepath: path.src.incdir
-    }))
-    .pipe(gulp.dest(path.build.dirDev))
-    .pipe(bs.reload({
-      stream: true
-    }));
-});
-
+      .pipe(fileinclude({
+        basepath: path.src.incdir
+      }))
+      .pipe(gulp.dest(path.build.dirDev))
+      .pipe(bs.reload({
+        stream: true
+      }));
+}
 // SCSS
-gulp.task('scss:build', function () {
-return gulp.src(path.src.scss)
-  .pipe(sourcemaps.init())
-  .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
-  .pipe(autoprefixer())
-  .pipe(sourcemaps.write('/'))
-  .pipe(gulp.dest(path.build.dirDev + 'css/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function scssBuild() {
+  return gulp.src(path.src.scss)
+      .pipe(sourcemaps.init())
+      .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+      .pipe(autoprefixer())
+      .pipe(sourcemaps.write('/'))
+      .pipe(gulp.dest(path.build.dirDev + 'css/'))
+      .pipe(bs.reload({
+        stream: true
+      }));
+}
 
 // Javascript
-gulp.task('js:build', function () {
-return gulp.src(path.src.js)
-  .pipe(gulp.dest(path.build.dirDev + 'js/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function jsBuild() {
+  return gulp.src(path.src.js)
+      .pipe(gulp.dest(path.build.dirDev + 'js/'))
+      .pipe(bs.reload({
+        stream: true
+      }));
+}
 
 // Images
-gulp.task('images:build', function () {
-return gulp.src(path.src.images)
-  .pipe(gulp.dest(path.build.dirDev + 'images/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function imagesBuild() {
+  return gulp.src(path.src.images)
+      .pipe(gulp.dest(path.build.dirDev + 'images/'))
+      .pipe(bs.reload({
+        stream: true
+      }));
+}
 
 // Plugins
-gulp.task('plugins:build', function () {
-return gulp.src(path.src.plugins)
-  .pipe(gulp.dest(path.build.dirDev + 'plugins/'))
-  .pipe(bs.reload({
-    stream: true
-  }));
-});
+function pluginsBuild() {
+  return gulp.src(path.src.plugins)
+      .pipe(gulp.dest(path.build.dirDev + 'plugins/'))
+      .pipe(bs.reload({
+        stream: true
+      }));
+}
 
 // Other files like favicon, php, sourcele-icon on root directory
-gulp.task('others:build', function () {
-return gulp.src(path.src.others)
-  .pipe(gulp.dest(path.build.dirDev))
-});
+function othersBuild() {
+  return gulp.src(path.src.others)
+      .pipe(gulp.dest(path.build.dirDev))
+}
 
 // Clean Build Folder
-gulp.task('clean', function (cb) {
-  rimraf('./theme', cb);
-});
+
+function clean(cb) {
+    rimraf('./public', cb);
+}
+
+
 
 // Watch Task
+/*
 gulp.task('watch:build', function () {
   gulp.watch(path.src.html, ['html:build']);
   gulp.watch(path.src.htminc, ['html:build']);
@@ -98,7 +101,11 @@ gulp.task('watch:build', function () {
   gulp.watch(path.src.plugins, ['plugins:build']);
 });
 
+ */
+
 // Build Task
+var build = gulp.series(clean, htmlBuild, jsBuild, scssBuild, imagesBuild, pluginsBuild, othersBuild);
+/*
 gulp.task('build', function () {
   runSequence(
     'clean',
@@ -119,4 +126,7 @@ gulp.task('build', function () {
   );
 });
 
-gulp.task("default", ["build"]);
+ */
+
+exports.default = build;
+//gulp.task("default", ["build"]);
