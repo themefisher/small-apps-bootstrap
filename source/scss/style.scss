@@ -1,60 +1,43 @@
-/*
-THEME: Small Apps | Bootstrap App Landing Template
-VERSION: 1.0.0
-AUTHOR: Themefisher
+@import "variables.scss";
 
-HOMEPAGE: https://themefisher.com/products/small-apps-free-app-landing-page-template/
-DEMO: https://demo.themefisher.com/small-apps/
-GITHUB: https://github.com/themefisher/Small-Apps-Bootstrap-App-Landing-Template
+@import "media-queries.scss";
 
-Get HUGO Version : https://themefisher.com/products/small-apps-hugo-app-landing-theme/
+@import "typography.scss";
 
-WEBSITE: https://themefisher.com
-TWITTER: https://twitter.com/themefisher
-FACEBOOK: https://www.facebook.com/themefisher
-*/
+@import "tabs.scss";
 
-@import 'variables.scss';
+@import "lists.scss";
 
-@import 'media-queries.scss';
+@import "common.scss";
 
-@import 'typography.scss';
+@import "button.scss";
 
-@import 'tabs.scss';
+@import "components/navigation.scss";
 
-@import 'lists.scss';
+@import "components/footer.scss";
 
-@import 'common.scss';
+@import "components/call-to-action.scss";
 
-@import 'button.scss';
+@import "components/modal.scss";
 
-@import 'components/navigation.scss';
+@import "pages/home.scss";
 
-@import 'components/footer.scss';
+@import "pages/team.scss";
 
-@import 'components/call-to-action.scss';
+@import "pages/blog.scss";
 
-@import 'components/modal.scss';
+@import "pages/about.scss";
 
-@import 'pages/home.scss';
+@import "pages/404.scss";
 
-@import 'pages/team.scss';
+@import "pages/career.scss";
 
-@import 'pages/blog.scss';
+@import "pages/faq.scss";
 
-@import 'pages/about.scss';
+@import "pages/privacy.scss";
 
-@import 'pages/404.scss';
+@import "pages/sign-in.scss";
 
-@import 'pages/career.scss';
+@import "pages/comming-soon.scss";
 
-@import 'pages/faq.scss';
-
-@import 'pages/privacy.scss';
-
-@import 'pages/sign-in.scss';
-
-@import 'pages/comming-soon.scss';
-
-@import 'pages/contact.scss';
-
+@import "pages/contact.scss";
